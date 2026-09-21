@@ -1,0 +1,110 @@
+{
+  "selected_model": "Gradient boosting",
+  "target": "Delivery_Delay",
+  "feature_order": [
+    "Delivery_Distance",
+    "Traffic_Congestion",
+    "Weather_Condition",
+    "Delivery_Slot",
+    "Driver_Experience",
+    "Num_Stops",
+    "Vehicle_Age",
+    "Road_Condition_Score",
+    "Package_Weight",
+    "Fuel_Efficiency",
+    "Warehouse_Processing_Time"
+  ],
+  "seed": 42,
+  "test_size": 0.2,
+  "cv_folds": 5,
+  "threshold": 0.5,
+  "selection_metric": "training-only mean CV ROC-AUC",
+  "training_rows": 800,
+  "test_rows": 200,
+  "duplicates_removed": 0,
+  "missing_values": 0,
+  "class_counts": {
+    "1": 511,
+    "0": 489
+  },
+  "training_ranges": {
+    "Delivery_Distance": {
+      "min": 1.226969127,
+      "max": 49.98616599
+    },
+    "Traffic_Congestion": {
+      "min": 1.0,
+      "max": 5.0
+    },
+    "Weather_Condition": {
+      "min": 1.0,
+      "max": 3.0
+    },
+    "Delivery_Slot": {
+      "min": 1.0,
+      "max": 3.0
+    },
+    "Driver_Experience": {
+      "min": 1.0,
+      "max": 19.0
+    },
+    "Num_Stops": {
+      "min": 1.0,
+      "max": 9.0
+    },
+    "Vehicle_Age": {
+      "min": 1.0,
+      "max": 9.0
+    },
+    "Road_Condition_Score": {
+      "min": 1.0,
+      "max": 5.0
+    },
+    "Package_Weight": {
+      "min": 0.511929732,
+      "max": 49.9607613
+    },
+    "Fuel_Efficiency": {
+      "min": 5.003644017,
+      "max": 19.96134409
+    },
+    "Warehouse_Processing_Time": {
+      "min": 10.0,
+      "max": 119.0
+    }
+  },
+  "versions": {
+    "python": "3.12.14",
+    "scikit-learn": "1.8.0",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "joblib": "1.5.3"
+  },
+  "data_sha256": "2ffdd7f40b5b24de831c43d9a19310d17de9f060fb00441700bd1cd6fdc79d16",
+  "model_sha256": "93d83851ec7dfc677684dc6b2d366973796f80267d14133325b0b78b4f302ba2",
+  "test_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "brier_score": 0.01993937456213209,
+    "confusion_matrix": [
+      [
+        98,
+        0
+      ],
+      [
+        0,
+        102
+      ]
+    ]
+  },
+  "limitations": [
+    "Teaching dataset; validate on future real deliveries.",
+    "Predictive importance is not proof of causation.",
+    "Probabilities have not been independently calibrated.",
+    "No timestamps or entity IDs were provided for temporal or grouped validation."
+  ]
+}
